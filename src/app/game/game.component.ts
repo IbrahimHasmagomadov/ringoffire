@@ -3,10 +3,16 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-game',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './game.component.html',
-  styleUrl: './game.component.scss'
+  styleUrls: ['./game.component.scss']
 })
 export class GameComponent {
+  pickCardAnimation: boolean = false;
+  constructor() { }
 
+  takeCard() {
+    this.pickCardAnimation = true;
+  }
 }
